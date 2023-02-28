@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,700;0,900;1,400&display=swap');
 
+/* aqui define o que estará em todo o site mas não dentro do root, colocar no root apenas o que for importante */
 * {
+    /* para cortar fora tudo o que estiver fora da tela */
     box-sizing: border-box;
 }
 
@@ -21,15 +23,24 @@ body{
 }
 /*alterar as configurações das listas*/
 ul{
-    display: flex;
-    list-style: none;
+    /* deixa ele flexivel colocando uma do lado da outra */
+    display: flex; 
+    /* retira a estilização da lista, como as bolinhas do lado */
+    list-style: none; 
     padding-left: 0;
+}
+
+h6{
+    margin: 0;
 }
 
 
 .navbar {
+    /* para colocar o navbar sempre fixo no site, mesmo quando rolado para baixo */
     position: fixed;
+    /* define que o elemento será em grid  */
     display: grid;
+    /* posiciona os elementos em colunas dentro da grid precisa colocar as medidas das colunas fr é a medida de fração que pode ser utilizada apenas no grid*/
     grid-template-columns: 1fr 8fr;
     align-items: center;
     top: 0;
@@ -57,8 +68,6 @@ ul{
     
 }
 
-
-
 /* aqui eu posso pegar um elemento de uma classe para que ele seja afetado por inteiro, neste caso é o elemento A */
 .navbar__links a{
     color: #fff;
@@ -69,9 +78,6 @@ ul{
 }
 
 /*  o hover serve para afetar quando o mouse passa por cima */
-
-
-
 .navbar__links a:hover{
     color: var(--colorPrimary);
 }
@@ -96,4 +102,10 @@ ul{
 
 .copy-primary{
     color: var(--colorPrimary);
+}
+
+#slider{
+    background-color: #000;
+    height: calc(100vh - 7.75rem);
+    color: #fff;
 }

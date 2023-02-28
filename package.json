@@ -1,0 +1,20 @@
+{
+  "name": "studion",
+  "version": "1.0.0",
+  "description": "primeiro projeto do curso",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx live-server src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maiqueanderson/studion.git"
+  },
+  "author": "Maique Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maiqueanderson/studion/issues"
+  },
+  "homepage": "https://github.com/maiqueanderson/studion#readme"
+}
