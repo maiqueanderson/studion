@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,700;0,900;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* aqui define as configurações da raiz do site */
+:root{
+    /* para criar uma variavel no css basta colocar --  */
+    --colorPrimary: #ffc500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    
+}
+
+/* aqui eu estou definindo todas as propriedades que estarão no body do site */
+body{
+    margin: 0;
+    /* empurra o conteudo da pagina para depois do navbar */
+    padding-top: 7.75rem; 
+}
+/*alterar as configurações das listas*/
+ul{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+
+.navbar {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 7.75rem;
+    padding: 0 1rem;
+    background-color: #000;
+    color: #fff;
+
+}
+
+.navbar__links{
+    justify-self: end;
+    
+
+}
+
+/*alterar as listas*/
+.navbar__links li{
+        font-size: 0.875rem;
+        /* coloca o texto em caixa alta */
+        text-transform: uppercase; 
+        margin-right: 3rem; /* unidade de medida que foi definida no root */
+    
+}
+
+
+
+/* aqui eu posso pegar um elemento de uma classe para que ele seja afetado por inteiro, neste caso é o elemento A */
+.navbar__links a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+   
+    
+}
+
+/*  o hover serve para afetar quando o mouse passa por cima */
+
+
+
+.navbar__links a:hover{
+    color: var(--colorPrimary);
+}
+
+.logo-studion{
+    font-size: 2.375rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: right;
+    /* vai colocar 1px a mais do tamanho da altura do glifo 0 da fonte */
+    line-height: 1ch;
+   
+}
+
+.logo-studion__subtitle{
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    text-align: right;
+
+}
+
+.copy-primary{
+    color: var(--colorPrimary);
+}
