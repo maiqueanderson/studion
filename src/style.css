@@ -12,7 +12,7 @@
     --colorPrimary: #ffc500;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    
+    --default-padding: 1rem;
 }
 
 /* aqui eu estou definindo todas as propriedades que estarão no body do site */
@@ -38,6 +38,7 @@ h6{
 .navbar {
     /* para colocar o navbar sempre fixo no site, mesmo quando rolado para baixo */
     position: fixed;
+    z-index: 1;
     /* define que o elemento será em grid  */
     display: grid;
     /* posiciona os elementos em colunas dentro da grid precisa colocar as medidas das colunas fr é a medida de fração que pode ser utilizada apenas no grid*/
@@ -106,6 +107,63 @@ h6{
 
 #slider{
     background-color: #000;
-    height: calc(100vh - 7.75rem);
     color: #fff;
 }
+
+.slide{
+    position: relative;
+    height: calc(100vh - 7.75rem);
+}
+
+.slide__background-image{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.slide__copy{
+    position: absolute;
+    top: 6.25rem;
+    /* vw é uma unidade de medida para view width largura da tela */
+    left: 50vw;
+}
+
+.slide__copy h6{
+    font-size: 0.9375rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1875rem;
+}
+
+.slide__copy h2{
+    font-size: 6.25rem;
+    text-transform: uppercase;
+    line-height: 6.25rem;
+}
+
+/* esse comando é para forçar a quebra de linha */
+.slide__copy h2 span{
+    display: block;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 1rem 2.5rem;
+    color: var(--colorPrimary);
+    border: 0.125rem solid #fff;
+    border-radius: 5rem;
+    /* para remover a cor do fundo do botão. */
+    background: unset;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* determina a transição all serve para tudo e o ease é o tipo */
+    transition: 0.5s all ease;
+}
+
+.btn:hover, .btn:active, .btn:focus{
+    border-color: var(--colorPrimary);
+    background-color: var(--colorPrimary);
+    color: #fff;
+} 
