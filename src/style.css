@@ -21,6 +21,16 @@ body{
     /* empurra o conteudo da pagina para depois do navbar */
     padding-top: 7.75rem; 
 }
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* para evitar a quebra do site com as barras horizontais */
+header, main, footer{
+    overflow-x: hidden;
+}
 /*alterar as configurações das listas*/
 ul{
     /* deixa ele flexivel colocando uma do lado da outra */
@@ -117,7 +127,6 @@ h6{
 
 .slide__background-image{
     width: 100%;
-    height: 100%;
     object-position: center;
     object-fit: cover;
 }
@@ -175,7 +184,12 @@ h6{
 }
 
 .counter__container{
-    margin: 0;
+    /* para colocar em colunas utilizar o display grid e depois definir quantas colunas com 1fr */
+    display: grid;
+    /* utilizar o repeat para repetir uma coisa, o auto-fill vai colocar as colunas automaticamente o minmax é para colocar o tamanno minimo e o maximo que vai ficar as colunas */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* para colocar os itens no centro da grid */
+    place-items: center;
     padding: 4.375rem 1rem;
 }
 
@@ -186,4 +200,53 @@ h6{
 .counter__container h3 small{
     display: block;
     font-size: 1.25rem;
+}
+
+.institutional{
+    display: grid;
+    grid-template-columns: auto auto;
+    /* para dar espaço entre as colunas */
+    gap: 3.125rem;
+    /* para alinhar todos os itens ao centro no eixo y */
+    align-items: center;
+    padding: 4.375rem;
+}
+
+.institutional__image{
+    max-width: 34.375rem;
+}
+
+.institutional__copy{
+    padding: 0 1.875rem 0 0;
+}
+
+.institutional__copy h6{
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.institutional__copy h4 {
+    font-size: 1.5625rem;
+    margin-top: 1rem;
+  }
+
+  .institutional p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6875rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn--institutional{
+    background-color: var(--colorPrimary);
+    color: #fff;
+}
+
+.btn--institutional:hover{
+    background-color: #fff;
+    border-color: var(--colorPrimary);
+    color: var(--colorPrimary);
 }
