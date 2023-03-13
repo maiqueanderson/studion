@@ -12,7 +12,9 @@
     --colorPrimary: #ffc500;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    color: #333;
     --default-padding: 1rem;
+    --color-copy: #333;
 }
 
 /* aqui eu estou definindo todas as propriedades que estarão no body do site */
@@ -49,18 +51,25 @@ h6{
     /* para colocar o navbar sempre fixo no site, mesmo quando rolado para baixo */
     position: fixed;
     z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    
+}
+
+.navbar__container{
     /* define que o elemento será em grid  */
     display: grid;
     /* posiciona os elementos em colunas dentro da grid precisa colocar as medidas das colunas fr é a medida de fração que pode ser utilizada apenas no grid*/
     grid-template-columns: 1fr 8fr;
     align-items: center;
-    top: 0;
-    left: 0;
+    
     width: 100vw;
     height: 7.75rem;
     padding: 0 1rem;
-    background-color: #000;
-    color: #fff;
+    
 
 }
 
@@ -236,7 +245,9 @@ h6{
   .institutional p {
     font-family: "Roboto", sans-serif;
     font-size: 1.0625rem;
+    /* espaçamento entre as linhas */
     line-height: 1.6875rem;
+    margin-bottom: 0;
     margin-bottom: 2.5rem;
   }
 
@@ -249,4 +260,63 @@ h6{
     background-color: #fff;
     border-color: var(--colorPrimary);
     color: var(--colorPrimary);
+}
+
+/* efeito de paralax */
+.quote{
+    
+    background-image: url(./images/parallax.jpg);
+    
+    /* para fazer o paralax da imagem */
+    background-attachment: fixed;
+    /* para parar de repetir a imagem */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.quote__container{
+    display: grid;
+    align-items: center;
+    justify-items: end;
+    min-height: 80vh;
+
+}
+
+.quote__copy{
+    background-color: #fff;
+    padding: 5.625rem 4.375rem;
+
+}
+
+.quote__copy h6{
+    font-size: 0.9375rem;
+    font-weight: 400;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase;
+    line-height: 1.4375rem;
+    /* largura maxima de 53 caracteres */
+    max-width: 53ch;
+    margin: 0;
+}
+
+.quote__copy h2{
+    font-size: 5rem;
+    line-height: 5rem;
+    text-transform: uppercase;
+    letter-spacing: - 0.1875rem;
+    margin: 1.875rem 0;
+    
+
+}
+
+.quote__copy h2 span{
+    display: block;
+}
+
+.btn--quote{
+   color: var(--color-copy); 
+   border-color: var(--color-copy);
+   background-color: unset;
 }
