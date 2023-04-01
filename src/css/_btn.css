@@ -1,0 +1,37 @@
+.btn{
+    cursor: pointer;
+    padding: 1rem 2.5rem;
+    color: var(--colorPrimary);
+    border: 0.125rem solid #fff;
+    border-radius: 5rem;
+    /* para remover a cor do fundo do botão. */
+    background: unset;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* determina a transição all serve para tudo e o ease é o tipo */
+    transition: 0.5s all ease;
+}
+
+.btn:hover, .btn:active, .btn:focus, .btn--contact{
+    border-color: var(--colorPrimary);
+    background-color: var(--colorPrimary);
+    color: #fff;
+} 
+
+.btn--institutional{
+    background-color: var(--colorPrimary);
+    color: #fff;
+}
+
+.btn--institutional:hover, .btn--contact:hover {
+    background-color: #fff;
+    border-color: var(--colorPrimary);
+    color: var(--colorPrimary);
+}
+
+.btn--quote{
+    color: var(--color-copy); 
+    border-color: var(--color-copy);
+    background-color: unset;
+ }

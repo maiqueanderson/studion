@@ -1,0 +1,111 @@
+.footer{
+
+    background-color: #000;
+    color: #fff;
+    padding: 0 1rem;
+}
+
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    padding: 5.25rem 0 3.25rem 0;
+}
+
+.footer .logo-studion{
+    justify-self: start;
+    margin: 0;
+}
+
+.logo-studion__subtitle{
+    display: block;
+}
+
+.footer__form{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 10ch auto;
+    gap: 1.25rem;
+}
+
+.footer__email{
+    display: grid;
+    grid-template-columns: auto 3.375rem;
+    width: 100%;
+    
+    
+}
+
+.footer__form label{
+    font-size: .875rem;
+    font-weight: 300;
+    line-height: 1.0625rem;
+    text-align: center;
+
+}
+
+.footer__form input{
+    
+    background-color: var(--colorPrimary);
+    border: unset;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #000;
+}
+/* para definir a cor do texto dentro do iput antes do usuario digitar */
+.footer__form input::placeholder{
+    color: #000;
+}
+
+/* para tirar as linhas em volta do input quando o usuario clica */
+.footer__form input:focus{
+
+outline: unset;
+}
+
+.footer__form button{
+    cursor: pointer;
+    border: unset;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.3s all;
+}
+
+.footer__form button:hover{
+   color: #fff;
+   background-color: var(--color-copy);
+}
+
+.footer__social{
+    justify-self: end;
+   
+    
+}
+
+.footer__social a, a:visited, a:active{
+    color: #fff;
+    margin-left: 0.2rem;
+}
+
+.fa-twitter {
+    color: #000;
+}
+
+.fa-youtube{
+    color: #000;
+}
+
+.footer hr{
+    border-color: #fff4;
+    margin: 0;
+}
+
+.footer p{
+    text-align: center;
+    font-size: .875rem;
+    font-weight: 300;
+    margin: 2.5rem 0;
+    
+}

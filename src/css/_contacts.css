@@ -1,0 +1,52 @@
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact__info{
+    padding: 7.125rem;
+}
+
+.contact__info__container, .contact__form__container{
+    width: 540px;
+}
+
+.contact__info__container{
+    float: right;
+}
+
+.contact__info__span, .contact_form label, .contact_form input{
+    display: block;
+}
+
+.contact__info i{
+    color: var(--colorPrimary);
+}
+
+.contact_form{
+    padding: 7.125rem;
+    background-color: #000;
+    color: #fff;
+   
+}
+
+.contact_form button {
+    float: right;
+}
+
+/* 
+estilo do formulario de contato */
+.contact_form input {
+    width: 100%;
+    margin-bottom: 1.875rem;
+    padding: 0.5rem 0;  
+    color: #fff;
+    background: unset;
+    border: unset;
+    border-bottom: 0.06rem solid #fff;
+    font-size: 1.5rem;
+}
+
+.contact_form input:focus{
+    outline: unset;
+}

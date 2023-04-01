@@ -1,0 +1,60 @@
+.navbar {
+    /* para colocar o navbar sempre fixo no site, mesmo quando rolado para baixo */
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    color: #fff;
+    
+}
+
+.navbar__container{
+    /* define que o elemento será em grid  */
+    display: grid;
+    /* posiciona os elementos em colunas dentro da grid precisa colocar as medidas das colunas fr é a medida de fração que pode ser utilizada apenas no grid*/
+    grid-template-columns: 1fr 8fr;
+    align-items: center;
+    
+    width: 100vw;
+    height: 7.75rem;
+    padding: 0 1rem;
+    
+    
+
+}
+
+.navbar__links{
+    justify-self: end;
+    
+
+}
+
+/*alterar as listas*/
+.navbar__links li{
+        font-size: 0.875rem;
+        /* coloca o texto em caixa alta */
+        text-transform: uppercase; 
+        margin-right: 3rem; /* unidade de medida que foi definida no root */
+    
+}
+
+/* aqui eu posso pegar um elemento de uma classe para que ele seja afetado por inteiro, neste caso é o elemento A */
+.navbar__links a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+   
+    
+}
+
+/*  o hover serve para afetar quando o mouse passa por cima */
+.navbar__links a:hover{
+    color: var(--colorPrimary);
+}
+
+.navbar__container a{
+    text-decoration: none;
+    color: white;
+}

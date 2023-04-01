@@ -1,0 +1,45 @@
+/* aqui define o que estará em todo o site mas não dentro do root, colocar no root apenas o que for importante */
+* {
+    /* para cortar fora tudo o que estiver fora da tela */
+    box-sizing: border-box;
+}
+
+/* aqui define as configurações da raiz do site */
+:root{
+    /* para criar uma variavel no css basta colocar --  */
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #333;
+
+}
+
+
+/* aqui eu estou definindo todas as propriedades que estarão no body do site */
+body{
+    margin: 0;
+    /* empurra o conteudo da pagina para depois do navbar */
+   
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* para evitar a quebra do site com as barras horizontais */
+header, main, footer{
+    overflow-x: hidden;
+}
+/*alterar as configurações das listas*/
+ul{
+    /* deixa ele flexivel colocando uma do lado da outra */
+    display: flex; 
+    /* retira a estilização da lista, como as bolinhas do lado */
+    list-style: none; 
+    padding-left: 0;
+}
+
+h6{
+    margin: 0;
+}
