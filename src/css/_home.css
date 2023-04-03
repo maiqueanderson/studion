@@ -22,9 +22,36 @@
     color: var(--colorPrimary);
 }
 
-#slider{
+.slider{
     background-color: #000;
     color: #fff;
+}
+
+.slider__next-arrow, .slider__prev-arrow{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 5px solid #fff;
+    border-right: unset;
+    border-bottom: unset;
+    opacity: 0.7;
+
+}
+
+.slider__prev-arrow{
+    left: 1rem;
+    z-index: 1;
+    transform: rotate(-45deg);
+
+}
+
+.slider__next-arrow::before, .slider__prev-arrow::before{
+    content: '';
+
+}
+
+.slider__next-arrow{
+    right: 1rem;
+    transform: rotate(135deg);
 }
 
 .slide{
